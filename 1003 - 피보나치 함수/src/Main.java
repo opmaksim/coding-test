@@ -11,7 +11,7 @@ public class Main {
         memo[0] = 0;
         memo[1] = 1;
         for (int i = 2; i <= n; i++) {
-            memo[i] = memo[i - 1] + memo[i - 2]; // ì¤‘ë³µ ê³„ì‚°ì„ í”¼í•˜ê¸° ìœ„í•´ ì €ìž¥ëœ ê²°ê³¼ë¥¼ ì‚¬ìš©
+            memo[i] = memo[i - 1] + memo[i - 2]; // Áßº¹ °è»êÀ» ÇÇÇÏ±â À§ÇØ ÀúÀåµÈ °á°ú¸¦ »ç¿ë
         }
         return memo[n];
     }

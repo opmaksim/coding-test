@@ -10,14 +10,14 @@ int main(void) {
     cin >> arr;
     int len = strlen(arr);
     for (int i = 0; i < len; i++) {
-        arr[i] = tolower(arr[i]); // ëª¨ë‘ ì†Œë¬¸ìë¡œ ë³€í™˜
+        arr[i] = tolower(arr[i]); // ¸ğµÎ ¼Ò¹®ÀÚ·Î º¯È¯
         arr2[arr[i] - 'a']++;
     }
-    int max_cnt = *max_element(arr2, arr2 + 26); // ìµœëŒ€ê°’ êµ¬í•˜ê¸°
-    int max_idx = max_element(arr2, arr2 + 26) - arr2; // ìµœëŒ€ê°’ ì¸ë±ìŠ¤ êµ¬í•˜ê¸°
-    int cnt = count(arr2, arr2 + 26, max_cnt); // ìµœëŒ€ê°’ ê°œìˆ˜ êµ¬í•˜ê¸°
+    int max_cnt = *max_element(arr2, arr2 + 26); // ÃÖ´ë°ª ±¸ÇÏ±â
+    int max_idx = max_element(arr2, arr2 + 26) - arr2; // ÃÖ´ë°ª ÀÎµ¦½º ±¸ÇÏ±â
+    int cnt = count(arr2, arr2 + 26, max_cnt); // ÃÖ´ë°ª °³¼ö ±¸ÇÏ±â
     if (cnt == 1) {
-        char ch = max_idx + 'A'; // ì¸ë±ìŠ¤ë¥¼ ëŒ€ë¬¸ìë¡œ ë³€í™˜
+        char ch = max_idx + 'A'; // ÀÎµ¦½º¸¦ ´ë¹®ÀÚ·Î º¯È¯
         cout << ch << endl;
     }
     else {

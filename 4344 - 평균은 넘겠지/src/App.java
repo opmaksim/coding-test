@@ -1,26 +1,26 @@
 import java.util.Scanner;
 
-public class Main {
+public class App {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int testCase = sc.nextInt();
 
         for (int i = 0; i < testCase; i++) {
-            int n = sc.nextInt(); // í•™ìƒ ìˆ˜
-            int[] scores = new int[n]; // ì ìˆ˜ ë°°ì—´
+            int n = sc.nextInt(); // ÇÐ»ý ¼ö
+            int[] scores = new int[n]; // Á¡¼ö ¹è¿­
             int sum = 0;
             double average = 0;
 
-            // ì ìˆ˜ ìž…ë ¥ë°›ê¸°
+            // Á¡¼ö ÀÔ·Â¹Þ±â
             for (int j = 0; j < n; j++) {
                 scores[j] = sc.nextInt();
                 sum += scores[j];
             }
 
-            // í‰ê·  ê³„ì‚°í•˜ê¸°
+            // Æò±Õ °è»êÇÏ±â
             average = (double) sum / n;
 
-            // í‰ê· ì„ ë„˜ëŠ” í•™ìƒì˜ ë¹„ìœ¨ ê³„ì‚°í•˜ê¸°
+            // Æò±ÕÀ» ³Ñ´Â ÇÐ»ýÀÇ ºñÀ² °è»êÇÏ±â
             int count = 0;
             for (int score : scores) {
                 if (score > average) {
@@ -29,7 +29,7 @@ public class Main {
             }
             double ratio = (double) count / n * 100;
 
-            // ê²°ê³¼ ì¶œë ¥í•˜ê¸°
+            // °á°ú Ãâ·ÂÇÏ±â
             System.out.printf("%.3f%%\n", ratio);
         }
     }
